@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <body>
+    <body ng-app="myApp">
 
-        <div ng-app="myApp" ng-controller="myController">
+        <div ng-controller="myController">
             <p>Name : <input type="text" ng-model="name"></p>
             <h1>Hello {{name}}</h1>
             <p>1 + 1 = {{ 1+1 }}</p>
+            <!-- Object -->
+            <p>{{ person.lastName }}</p>
+            <!-- Arrays -->
+            <p>{{ myArray[3] }}</p>
         </div>
 
     </body>
