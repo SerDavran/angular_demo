@@ -6,11 +6,13 @@
         <div ng-controller="myController">
             <p>Name : <input type="text" ng-model="name"></p>
             <h1>Hello {{name}}</h1>
-            <p>1 + 1 = {{ 1+1 }}</p>
+            Quantity: <input type="text" ng-model="quantity">
+            Cost: <input type="text" ng-model="cost">
+            <p>Quantity * Cost = {{ quantity * cost }}</p>
             <!-- Object -->
             <p>{{ person.lastName }}</p>
             <!-- Arrays -->
-            <p>{{ myArray[3] }}</p>
+            <p ng-repeat="x in myArray">{{ x }}</p>
         </div>
 
     </body>
