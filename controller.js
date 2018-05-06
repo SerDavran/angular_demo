@@ -6,7 +6,18 @@ app.controller('myController', function($scope) {
     // Object
     $scope.person = {firstName:'Serafim', lastName:'Ntavranis'};
     // Arrays
-    $scope.myArray = [1, 3, 6, 7]; 
+    $scope.myArray = [1, 3, 4, 6, 7, 24, 8, 46]; 
+    $scope.names = [
+        'Jani',
+        'Carl',
+        'Margareth',
+        'Hege',
+        'Joe',
+        'Gustav',
+        'Birgit',
+        'Mary',
+        'Kai'
+    ];
     // Function
     $scope.changeName = function(e){
         if( $scope.startingVar != 'Second var name' ){
