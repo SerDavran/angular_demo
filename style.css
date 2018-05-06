@@ -1,0 +1,9 @@
+input.myEmail.ng-invalid {
+    background-color: rgb(245, 116, 116);
+}
+input.myEmail.ng-valid {
+    background-color: rgb(26, 241, 26);
+}
+h3 {
+    cursor: pointer;
+}

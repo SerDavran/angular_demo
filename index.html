@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <body ng-app="myApp">
 
         <div ng-controller="myController">
@@ -13,11 +14,22 @@
             <p>{{ person.lastName }}</p>
             <!-- Arrays -->
             <p ng-repeat="x in myArray">{{ x }}</p>
+            <!-- On click -->
+            <h3 ng-click="changeName()">{{ startingVar }}</h3>
         </div>
 
         <test-directive></test-directive>
 
-        </div>
+        <form name="myForm">
+            Email:
+            <input class="myEmail" type="email" name="myAddress" ng-model="text" required>
+            <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+            <h1>Status</h1>
+            <!-- Valid != Dirty -->
+            {{ myForm.myAddress.$valid }}
+            {{ myForm.myAddress.$touched }}
+            {{ myForm.myAddress.$dirty }}
+        </form>
 
     </body>
 
