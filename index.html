@@ -5,6 +5,7 @@
     <body ng-app="myApp">
 
         <div ng-controller="myController">
+            <h2>{{ time }}</h2>
             <p>Name : <input type="text" ng-model="name"></p>
             <h1>Hello {{name | uppercase}}</h1>
             Quantity: <input type="text" ng-model="quantity">
@@ -16,10 +17,16 @@
             <p ng-repeat="x in myArray | filter:'4'">{{ x }}</p>
             Filter table: <input type="text" ng-model="filter_test">
             <ul>
-                <li ng-repeat="x in names | filter:filter_test">{{ x }}</li>
+                <li ng-repeat="x in names | filter:filter_test">{{ $index+1 }} -- {{ x }}</li>
             </ul>
             <!-- On click -->
             <h3 ng-click="changeName()">{{ startingVar }}</h3>
+            <!-- Http service -->
+            <div ng-click="getResponce()">GET HTTP</div>
+            <!-- Select -->
+            <select ng-model="selectedName" ng-options="x.firstName for x in person"></select>
+            <h3>You selected: {{ selectedName.firstName }}</h3>
+            <h4>You selected: {{ selectedName.lastName }}</h4>
         </div>
 
         <test-directive></test-directive>
